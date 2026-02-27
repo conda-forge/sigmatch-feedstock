@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - printo >=0.0.10
+    - printo >=0.0.14
 
 tests:
   - python:
