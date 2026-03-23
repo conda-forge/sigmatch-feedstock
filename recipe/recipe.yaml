@@ -23,14 +23,16 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - printo >=0.0.14
+    - printo >=0.0.22
 
 tests:
   - python:
       imports:
         - sigmatch
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A quick way to verify function signatures in Python
