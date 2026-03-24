@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.8"
+  version: "0.0.9"
 
 package:
   name: sigmatch
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sigmatch/sigmatch-${{ version }}.tar.gz
-  sha256: 6aefb693d86d33b5c95bd1b74eedaf7737f4658a26cf4ced43620c3cdd61f000
+  sha256: d9ed5da484297f5faa97c8f534a41a9ba5d34e96ea6d776a0d536f430501c59f
 
 build:
   number: 0
@@ -23,14 +23,16 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - printo >=0.0.14
+    - printo >=0.0.22
 
 tests:
   - python:
       imports:
         - sigmatch
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A quick way to verify function signatures in Python
