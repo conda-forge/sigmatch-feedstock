@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.9"
+  version: "0.0.10"
 
 package:
   name: sigmatch
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sigmatch/sigmatch-${{ version }}.tar.gz
-  sha256: d9ed5da484297f5faa97c8f534a41a9ba5d34e96ea6d776a0d536f430501c59f
+  sha256: ac1e3233cedf19bdfb6e4c42a032b3a381b48c46f597fc1ab613512f75ffb03c
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - printo >=0.0.22
+    - printo >=0.0.26
 
 tests:
   - python:
